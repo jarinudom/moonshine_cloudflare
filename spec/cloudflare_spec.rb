@@ -1,14 +1,14 @@
 require File.join(File.dirname(__FILE__), 'spec_helper.rb')
 
-class XsendfileManifest < Moonshine::Manifest
-  plugin :xsendfile
+class CloudflareManifest < Moonshine::Manifest
+  plugin :cloudflare
 end
 
-describe "A manifest with the Xsendfile plugin" do
+describe "A manifest with the Cloudflare plugin" do
   
   before do
-    @manifest = XsendfileManifest.new
-    @manifest.xsendfile
+    @manifest = CloudflareManifest.new
+    @manifest.cloudflare
   end
   
   it "should be executable" do

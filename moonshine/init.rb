@@ -1,3 +1,3 @@
-require "#{File.dirname(__FILE__)}/../lib/xsendfile.rb"
+require "#{File.dirname(__FILE__)}/../lib/cloudflare.rb"
 
-include Xsendfile
+include Cloudflare

@@ -1,13 +1,14 @@
-= Moonshine_Xsendfile
+= Moonshine_Cloudflare
 
 === A plugin for Moonshine[http://github.com/railsmachine/moonshine]
 
-A plugin for installing and managing mod_xsendfile[https://tn123.org/mod_xsendfile/] for Apache.
+A plugin for installing and managing mod_cloudflare[https://github.com/cloudflare/CloudFlare-Tools/] for Apache.
+
+If you're using Cloudflare, request.remote_ip always comes from a Cloudflare IP address! This is bad if you're using the IP address for geolocation or fraud control or anything else. This Apache module takes the CF-Connecting-IP header from Cloudflare and replaces remote_ip with it. It only does the switch for traffic proxied by Cloudflare. All other requests are unaffected.
 
 === Instructions
 
-* <tt>script/plugin install git://github.com/railsmachine/moonshine_xsendfile.git</tt>
-* Configure settings if needed (it probably isn't)
-    configure(:xsendfile => {:x_send_file_path => '/some/absolute/path'})
+* <tt>script/plugin install git://github.com/jarinudom/moonshine_cloudflare.git</tt>
+* No configuration needed!
 * Include the recipe in your Moonshine manifest
-    recipe :xsendfile
+    recipe :cloudflare
