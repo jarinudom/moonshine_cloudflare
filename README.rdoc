@@ -4,7 +4,7 @@
 
 A plugin for installing and managing mod_cloudflare[https://github.com/cloudflare/CloudFlare-Tools/] for Apache.
 
-If you're using CloudFlare[http://cloudflare.com], request.remote_ip always comes from a CloudFlare IP address! This is bad if you're using the IP address for geolocation or fraud control or anything else. This Apache module takes the CF-Connecting-IP header from CloudFlare and replaces remote_ip with it. It only does the switch for traffic proxied by CloudFlare. All other requests are unaffected.
+If you're using CloudFlare[http://cloudflare.com], request.remote_ip always comes from a CloudFlare IP address! This is bad if you're using the IP address for geolocation, or fraud control, or anything else. This Apache module takes the CF-Connecting-IP header from CloudFlare and replaces remote_ip with it. It only does the switch for traffic proxied by CloudFlare. All other requests are unaffected.
 
 === Instructions
 
