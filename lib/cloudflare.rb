@@ -20,7 +20,7 @@ module Cloudflare
       :creates => '/usr/lib/apache2/modules/mod_cloudflare.so'
 
 
-    conf <<-eos
+    conf = <<-eos
       CloudFlareRemoteIPTrustedProxy 204.93.240.0/24
       CloudFlareRemoteIPTrustedProxy 204.93.177.0/24
       CloudFlareRemoteIPTrustedProxy 199.27.128.0/21
