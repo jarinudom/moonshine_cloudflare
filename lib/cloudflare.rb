@@ -12,8 +12,8 @@ module Cloudflare
     exec 'install_cloudflare',
       :cwd => '/tmp',
       :command => [
-        'wget https://github.com/cloudflare/CloudFlare-Tools/raw/master/mod_cloudflare.c --no-check-certificate',
-        'apxs2 -ci mod_cloudflare.c'
+        'wget https://raw.github.com/cloudflare/CloudFlare-Tools/master/mod_cloudflare.c --no-check-certificate',
+        'apxs2 -a -i -c mod_cloudflare.c'
       ].join(' && '),
       :require => package('apache2-threaded-dev'),
       :before => service('apache2'),
