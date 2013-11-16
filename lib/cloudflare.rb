@@ -25,13 +25,21 @@ module Cloudflare
       CloudFlareRemoteIPTrustedProxy 204.93.177.0/24
       CloudFlareRemoteIPTrustedProxy 199.27.128.0/21
       CloudFlareRemoteIPTrustedProxy 173.245.48.0/20
+      CloudFlareRemoteIPTrustedProxy 103.21.244.0/22
       CloudFlareRemoteIPTrustedProxy 103.22.200.0/22
+      CloudFlareRemoteIPTrustedProxy 103.31.4.0/22
       CloudFlareRemoteIPTrustedProxy 141.101.64.0/18
       CloudFlareRemoteIPTrustedProxy 108.162.192.0/18
       CloudFlareRemoteIPTrustedProxy 190.93.240.0/20
+      CloudFlareRemoteIPTrustedProxy 188.114.96.0/20
+      CloudFlareRemoteIPTrustedProxy 197.234.240.0/22
+      CloudFlareRemoteIPTrustedProxy 198.41.128.0/17
+      CloudFlareRemoteIPTrustedProxy 162.158.0.0/15
       CloudFlareRemoteIPTrustedProxy 2400:cb00::/32
       CloudFlareRemoteIPTrustedProxy 2606:4700::/32
       CloudFlareRemoteIPTrustedProxy 2803:f800::/32
+      CloudFlareRemoteIPTrustedProxy 2405:b500::/32
+      CloudFlareRemoteIPTrustedProxy 2405:8100::/32
     eos
 
     file '/etc/apache2/mods-available/cloudflare.conf',
