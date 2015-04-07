@@ -1,24 +1,37 @@
-require File.join(File.dirname(__FILE__), 'spec_helper.rb')
+require File.join(File.dirname(__FILE__), "spec_helper.rb")
 
 class CloudflareManifest < Moonshine::Manifest
-  plugin :cloudflare
+  include Moonshine::Cloudflare
+  configure user: "rails"
 end
 
 describe "A manifest with the Cloudflare plugin" do
-  
   before do
     @manifest = CloudflareManifest.new
-    @manifest.cloudflare
   end
-  
-  it "should be executable" do
-    @manifest.should be_executable
+
+  it "is executable" do
+    expect(@manifest).to be_executable
   end
-  
-  #it "should provide packages/services/files" do
-  # @manifest.packages.keys.should include 'foo'
-  # @manifest.files['/etc/foo.conf'].content.should match /foo=true/
-  # @manifest.execs['newaliases'].refreshonly.should be_true
-  #end
-  
+
+  describe "using the `cloudflare` recipe" do
+    before do
+      @manifest.cloudflare
+    end
+
+    it "ensures apache is installed" do
+      expect(@manifest).to have_package("apache2-threaded-dev")
+    end
+
+    it "installs cloudflare" do
+      expect(@manifest).to have_file("/usr/lib/apache2/modules/mod_cloudflare.so")
+    end
+  end
+
+  # it "should provide packages/services/files" do
+  #  @manifest.packages.keys.should include 'foo'
+  #  @manifest.files['/etc/foo.conf'].content.should match /foo=true/
+  #  @manifest.execs['newaliases'].refreshonly.should be_true
+  # end
 end
+

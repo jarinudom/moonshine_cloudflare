@@ -1,0 +1,17 @@
+AllCops:
+  Include:
+    - Gemfile
+    - Rakefile
+
+Style/Documentation:
+  Enabled: false
+
+Style/TrailingBlankLines:
+  EnforcedStyle: final_blank_line
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Metrics/LineLength:
+  Max: 100
+

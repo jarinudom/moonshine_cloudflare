@@ -1,8 +1,11 @@
-require 'rubygems'
-ENV['RAILS_ENV'] = 'test'
-ENV['RAILS_ROOT'] ||= File.dirname(__FILE__) + '/../../../..'
+require "rubygems"
+ENV["RAILS_ENV"] = "test"
+ENV["RAILS_ROOT"] ||= File.dirname(__FILE__) + "/../../../.."
 
-require File.join(File.dirname(__FILE__), '..', '..', 'moonshine', 'lib', 'moonshine.rb')
-require File.join(File.dirname(__FILE__), '..', 'lib', 'cloudflare.rb')
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), "..", "..", "moonshine", "lib")
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
-require 'shadow_puppet/test'
+require "moonshine"
+require "moonshine/cloudflare"
+require "shadow_puppet/test"
+
