@@ -10,6 +10,7 @@ If you're using CloudFlare[http://cloudflare.com], request.remote_ip always come
 
 * Rails 2: <tt>script/plugin install git://github.com/jarinudom/moonshine_cloudflare.git</tt>
 * Rails 3: <tt>rails plugin install git://github.com/jarinudom/moonshine_cloudflare.git</tt>
+* Rails 4: <tt>plugger install git://github.com/jarinudom/moonshine_cloudflare.git</tt>
 * No configuration needed!
 * Include the recipe in your Moonshine manifest
     recipe :cloudflare
