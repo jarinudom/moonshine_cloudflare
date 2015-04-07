@@ -1,3 +1,6 @@
-require "#{File.dirname(__FILE__)}/../lib/cloudflare.rb"
+require "pathname"
+$LOAD_PATH.unshift Pathname.new(__FILE__).dirname.join("..", "lib").expand_path
+require "moonshine/cloudflare"
 
-include Cloudflare
+include Moonshine::Cloudflare
+
