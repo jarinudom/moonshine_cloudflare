@@ -21,8 +21,6 @@ module Cloudflare
 
 
     conf = <<-eos
-      CloudFlareRemoteIPTrustedProxy 204.93.240.0/24
-      CloudFlareRemoteIPTrustedProxy 204.93.177.0/24
       CloudFlareRemoteIPTrustedProxy 199.27.128.0/21
       CloudFlareRemoteIPTrustedProxy 173.245.48.0/20
       CloudFlareRemoteIPTrustedProxy 103.21.244.0/22
@@ -35,6 +33,8 @@ module Cloudflare
       CloudFlareRemoteIPTrustedProxy 197.234.240.0/22
       CloudFlareRemoteIPTrustedProxy 198.41.128.0/17
       CloudFlareRemoteIPTrustedProxy 162.158.0.0/15
+      CloudFlareRemoteIPTrustedProxy 104.16.0.0/12
+      CloudFlareRemoteIPTrustedProxy 172.64.0.0/13
       CloudFlareRemoteIPTrustedProxy 2400:cb00::/32
       CloudFlareRemoteIPTrustedProxy 2606:4700::/32
       CloudFlareRemoteIPTrustedProxy 2803:f800::/32
